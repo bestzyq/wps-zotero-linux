@@ -1,0 +1,42 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddinLoad">
+    <ribbon startFromScratch="false">
+        <tabs>
+            <tab id="zoteroTab" label="Zotero" keytip="C">
+                <group id="zoteroGroup" >
+                    <button id="btnAddEditCitation" label="添加/编辑引注" onAction="OnAction" getImage="GetImage" visible="true" size="large" supertip="在当前光标位置插入新引注，或编辑光标处的引注" keytip="C"/>
+                    <button id="btnAddEditBib" label="添加/编辑参考文献" onAction="OnAction" getImage="GetImage" visible="true" size="large" supertip="在当前光标位置插入参考文献表，或编辑已有的参考文献表" keytip="B"/>
+                    <button id="btnRefresh" label="刷新" onAction="OnAction" getImage="GetImage" visible="true" size="large" supertip="更新所有引注，反映 Zotero 文献库中的改动" keytip="R"/>
+                     <separator/>
+                    <button id="btnPref" label="文档首选项" onAction="OnAction" getImage="GetImage" visible="true"   supertip="修改引注样式或语言" keytip="P"/>
+                    <button id="btnAddNote" label="插入注释" onAction="OnAction" getImage="GetImage" visible="true"   supertip="在当前光标位置插入一条注释" keytip="N"/>
+                     <separator/>
+                    <button id="btnUnlink" label="取消引注链接" onAction="OnAction" getImage="GetImage" visible="true"   supertip="移除所有 Zotero 域代码，与 Zotero 文献库解除链接" keytip="U"/>
+                   <button id="btnCitationHyperlinks" label="引注超链接" onAction="OnAction" getImage="GetImage" visible="true"  supertip="为引注添加或移除超链接" keytip="E"/>
+                    
+                 </group>
+                  
+                <group id="AiList" >
+                  <separator/>
+                <menu id="menu1" label="AI 工具"  getImage="GetImage" visible="true"  showItemImage="true" size="large">
+                     <button id="yuanbaoItem" label="腾讯元宝" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />   
+                    <button id="baiduaiItem" label="百度AI" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />   
+                    <button id="deepseekItem" label="DeepSeek" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />   
+                    <button id="chatGPTItem" label="ChatGPT" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />   
+                    <button id="zhipuItem" label="智谱清言" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />
+                    <button id="tongyiItem" label="通义千问" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />      
+                    <button id="doubaoItem" label="豆包" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />   
+                    <button id="kimiItem" label="Kimi" onAction="dropDownOnAction" getImage="GetImage" visible="true" size="large" />   
+                </menu>
+                    
+                    <button id="btnDonate" label="捐助" onAction="OnAction" getImage="GetImage" visible="true" size="large" />
+                  
+                     <menu id="menu2" label="设置"  getImage="GetImage" visible="true"  showItemImage="true" size="large">
+                  
+                      <button id="btnZoteroSet" label="Zotero 设置" onAction="SettingsOnAction" getImage="GetImage" visible="true" size="large" />   
+                </menu>
+                      <button id="btnAbout" label="关于" onAction="SettingsOnAction" getImage="GetImage" visible="true" size="large" />
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
